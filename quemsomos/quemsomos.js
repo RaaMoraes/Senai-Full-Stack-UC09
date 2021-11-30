@@ -1,14 +1,19 @@
-let carrossel = document.getElementById("carrossel")
-let contador = 0
+$(document).ready(function(){
+  
+    $("#carrossel img:eq(0)").addClass("bannerAtivo").show()
 
+    
+    setInterval(slide, 1000) 
 
-function carrossel1() {
-    contador++;
-    if (contador > 2) {
-        contador = 0
+    function slide(){
+        if($(".bannerAtivo").next().length){  
+            $(".bannerAtivo").removeClass("bannerAtivo").hide().next().addClass("bannerAtivo").show()
+        } else {
+            $(".bannerAtivo").removeClass("bannerAtivo").hide()
+            $("#carrossel img:eq(0)").addClass("bannerAtivo").show()
+        }  
     }
-    carrossel.style.transform = `translateX(${-contador*500}px)`
+    
+      
+})
 
-}
-
-setInterval(carrossel1, 3000)

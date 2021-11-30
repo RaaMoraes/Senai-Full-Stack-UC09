@@ -204,17 +204,23 @@ header{
     margin-bottom: 20px;
 }
 
-.imagem{
-    width: 500px;
-    height: 500px;
+/* .carrossel img{
     border-radius: 10px;
-     
+   
+} */
+
+#carrossel img {
+    display: none;
 }
 
-.carrossel{
+.bannerAtivo{
+    
+}
+
+/* .carrossel{
     transition: transform 0.5s ease-in-out;
     transform: translateX(0); 
-}
+} */
 
 .quemsomos2{
     width: 1200px;
